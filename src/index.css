@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- List Tree Styles --- */
+.tree-item-content:hover {
+    background-color: #374151; /* gray-700 */
+}
+.tree-content {
+    display: none;
+}
+.tree-item.open > .tree-content {
+    display: block;
+}
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+/* --- Tab Styles --- */
+.viz-tab.active-tab {
+     background-color: #374151; /* gray-700 */
+}
+
+/* --- D3 Graph Styles --- */
+.d3-link {
+    fill: none;
+    stroke: #4b5563; /* gray-600 */
+    stroke-opacity: 0.6;
+    stroke-width: 1.5px;
+}
+.d3-node circle {
+    stroke: #9ca3af; /* gray-400 */
+    stroke-width: 1.5px;
+}
+.d3-node text {
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    fill: #d1d5db; /* gray-300 */
+    paint-order: stroke;
+    stroke: #111827; /* gray-900 */
+    stroke-width: 3px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+}
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    font: 12px 'Inter', sans-serif;
+    background: #1f2937; /* gray-800 */
+    border: 1px solid #4b5563; /* gray-600 */
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 10;
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #1f2937; /* gray-800 */
+}
+::-webkit-scrollbar-thumb {
+    background: #4b5563; /* gray-600 */
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280; /* gray-500 */
+}
