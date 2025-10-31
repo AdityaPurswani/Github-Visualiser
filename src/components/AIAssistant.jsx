@@ -33,7 +33,7 @@ const AIAssistant = ({ repoData, onFileContentRequested }) => {
         try {
             const genAI = new GoogleGenerativeAI(key);
             // Quick check to see if the model can be initialized
-            await genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+            await genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
             setIsKeyValid(true);
             localStorage.setItem('gemini_api_key', key);
         } catch (error) {
@@ -63,7 +63,7 @@ const AIAssistant = ({ repoData, onFileContentRequested }) => {
 
         try {
             const genAI = new GoogleGenerativeAI(apiKey);
-            const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+            const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
             let context = "CONTEXT: You are an expert programmer and AI assistant. The user has provided the following file(s) from a GitHub repository. Answer the user's question based on the content of these files.\n\n";
 
